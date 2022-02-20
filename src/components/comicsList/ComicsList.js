@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
+
 import useMarvelService from "../../services/MarvelService";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
@@ -31,7 +32,6 @@ const ComicsList = () => {
 		if (newComicsList.length < 8) {
 			ended = true;
 		}
-
 		setComicsList(comicsList => [...comicsList, ...newComicsList]);
 		setNewItemLoading(false);
 		setOffset(offset + 8);
